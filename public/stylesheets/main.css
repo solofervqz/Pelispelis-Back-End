@@ -1,0 +1,41 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+@import 'shared/form.css';
+@import 'shared/director.css';
+@import 'shared/peliculas.css';
+
+:root {
+  font-family: 'Poppins';
+  font-size: 20px;
+  color: var(--color-text-light);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, var(--base-2) , var(--base) );
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.inner-container {
+  margin: 0 2rem;
+}
+
+.page-header {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.error-message {
+  color: red;
+}

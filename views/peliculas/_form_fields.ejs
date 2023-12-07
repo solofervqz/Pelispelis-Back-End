@@ -1,0 +1,49 @@
+<!-- Compos de formulario pelicula. -->
+<div class="form-row">
+    <div class="form-item">
+      <label>Titulo</label>
+      <input type="text" name="title" value="<%= pelicula.title %>">
+    </div>
+    <div class="form-item">
+      <label>Director</label>
+      <select name="director">
+        <% directores.forEach(director => { %>
+          <% if (director.id === pelicula.director) { %>
+            <option selected label="<%= director.name %>" value="<%= director.id %>">
+          <% } else { %>
+            <option label="<%= director.name %>" value="<%= director.id %>">
+          <% } %>
+        <% }) %>
+      </select>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-item">
+      <label>Fecha de Lanzamiento</label>
+      <input type="date" name="publishDate"
+            value="<%= pelicula.publishDate == null ? '' : pelicula.publishDate.toISOString().split('T')[0] %>">
+    </div>
+    <div class="form-item">
+      <label>Duración</label>
+      <input type="number" name="duration" min="1" value="<%= pelicula.duration %>">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-item">
+      <label>Trailer</label>
+      <input type="text" name="trailer" value="<%= pelicula.trailer %>">
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-item form-item-no-grow">
+      <label>Poster</label>
+      <input type="file" name="cover" class="pelicula-cover filepond">
+    </div>
+    <div class="form-item">
+      <label>Descripción</label>
+      <textarea name="description"><%= pelicula.description %></textarea>
+    </div>
+  </div>

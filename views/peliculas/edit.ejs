@@ -1,0 +1,9 @@
+<!-- vista de edición de una película-->
+<h2 class="page-header">Editar Película</h2>
+<form action="/peliculas/<%= pelicula.id %>?_method=PUT" method="POST">
+  <%- include('_form_fields') %>
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/peliculas">Cancelar</a>
+    <button class="btn btn-primary" type="submit">Actualizar</button>
+  </div>
+</form>

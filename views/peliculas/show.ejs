@@ -1,0 +1,29 @@
+<!--  vista de detalles de una película -->
+<h2 class="page-header"><%= pelicula.title %></h2>
+<div class="pelicula-details">
+  <div>
+    <img class="pelicula-cover" src="<%= pelicula.coverImagePath %>">
+    <div class="pelicula-details-btn-grid">
+      <a class="btn btn-primary" href="/peliculas/<%= pelicula.id %>/edit">Editar</a>
+      <!-- Formulario para eliminar la película. -->
+      <%- include('../partials/deleteForm', { url: `/peliculas/${pelicula.id}` }) %>
+      <!-- Botón para ver más detalles sobre el director de la película. -->
+      <a class="btn btn-primary pelicula-details-director-button" href="/directores/<%= pelicula.director.id %>">Ver director</a>
+    </div>
+  </div>
+  <div class="pelicula-details-grid">
+    <div class="pelicula-details-label">Director:</div>
+    <div><%= pelicula.director.name %></div>
+    <div class="pelicula-details-label">Lanzamiento:</div>
+    <div><%= pelicula.publishDate.toDateString() %></div>
+    <div class="pelicula-details-label">Duración:</div>
+    <div><%= pelicula.duration %> min.</div>
+    <div class="pelicula-details-label">Descripcion:</div>
+    <div><%= pelicula.description %></div>
+    <div class="pelicula-details-label">Trailer:</div>
+    <div class="pelicula-trailer">
+      <!-- Elemento iframe para reproducir el tráiler desde YouTube. -->
+      <iframe  src="<%= pelicula.trailer%>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

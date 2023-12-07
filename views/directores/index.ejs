@@ -1,0 +1,26 @@
+<!--vista de índice de directores -->
+<h2 class="page-header">Buscar directores</h2>
+<form action="/directores" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Ingresa nombre</label>
+      <div class="input-btn-container">
+        <input class="input-buscar" type="text" name="name" value="<%= searchOptions.name %>">
+        <button class="btn btn-primary btn-buscar" type="submit">Buscar</button>
+      </div>
+    </div>
+  </div>
+
+</form>
+<% directores.forEach(director => { %>
+  <div class="director-row" id="director_<%= director.id %>">
+    <div class="director-info" onmouseover="mostrarBotones('<%= director.id %>')" onmouseout="ocultarBotones('<%= director.id %>')">
+      <div class="director-name"><%= director.name %></div>
+      <div class="btn-row btn-open">
+        <a class="btn btn-primary" href="/directores/<%= director.id %>">Ver filmografía</a>
+        <a class="btn btn-primary" href="/directores/<%= director.id %>/edit">Modificar</a>
+        <%- include('../partials/deleteForm', { url: `/directores/${director.id}` }) %>
+      </div>
+    </div>
+  </div>
+<% }) %>

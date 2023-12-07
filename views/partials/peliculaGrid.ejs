@@ -1,0 +1,10 @@
+<!-- Cuadrícula para mostrar las portadas de las películas -->
+<% peliculaCoverClass = locals.large ? 'pelicula-cover-large' : '' %>
+<% peliculaGridClass = locals.large ? 'pelicula-grid-large' : '' %>
+<div class="pelicula-grid <%= peliculaGridClass %>">
+  <% peliculas.forEach(pelicula => { %>
+    <a href="/peliculas/<%= pelicula.id %>">
+      <img class="pelicula-cover <%= peliculaCoverClass %>" src="<%= pelicula.coverImagePath %>">
+    </a>
+  <% }) %>
+</div>

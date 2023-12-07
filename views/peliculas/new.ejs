@@ -1,0 +1,10 @@
+<!-- vista para crear una nueva película. -->
+<h2 class="page-header">Nueva Película</h2>
+<form action="/peliculas" method="POST">
+  <!-- Incluye formulario reutilizable de película. -->
+  <%- include('_form_fields') %>
+  <div class="form-row form-row-end btn-row">
+    <a class="btn btn-danger" href="/peliculas">Cancelar</a>
+    <button class="btn btn-primary" type="submit">Crear</button>
+  </div>
+</form>

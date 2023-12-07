@@ -1,0 +1,84 @@
+:root {
+  --form-label-font-size: 1.2rem;
+    --base: #450045; /* Cambia este valor al color hexadecimal que desees */
+    --claro: #c439b3;
+    --oscuro: #b1009c;
+    --peligro: #e74c3c; /* Puedes cambiar este valor también si lo deseas */
+    --gris: #827280; /* Ajusta el porcentaje según tus preferencias */
+    --cafe: #683142;
+    --cafe-oscuro: #6d1330;
+    --color-text-light: #ecf0f1; 
+    --color-text-light-p: #de58ff;  /* Cambia este valor al color de texto que prefieras */
+  }
+  
+  .btn {
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Poppins';
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+    
+  .btn-row > * {
+    margin-left: 10px;
+  }
+
+  .btn-row {
+    display: flex;
+    align-items: left;
+  }
+  
+  .btn-open.show {
+    opacity: 1;
+    visibility: visible;
+    height: 72px;
+  }
+
+  .btn-open{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    height: 0;
+  }
+  
+  
+  .btn-row > *:first-child {
+    margin-left: 0;
+  }
+  
+  .btn-primary {
+    border: 2px solid  #c439b3;
+    color: var(--color-text-light);
+    background-color: var(--claro);
+    transition: all 1s ease;
+  }
+  
+  .btn-primary:hover {
+    border-color: var(--oscuro);
+    background-color: var(--oscuro);
+  }
+  
+  .btn-danger {
+    border: 2px solid  #683142;
+    color: var(--color-text-light);
+    background-color: var(--cafe);
+    transition: all 1s ease;
+  }
+  
+  .btn-danger:hover {
+    border-color: var(--cafe-oscuro);
+    background-color: var(--cafe-oscuro);
+  }
+
+  .btn-buscar{
+    display: inline;
+    padding: 0;
+    width: 20%;
+    height: 42px;
+  }

@@ -1,0 +1,79 @@
+:root {
+    --pelicula-cover-width: 200px;
+    --pelicula-cover-width-large: 325px;
+    --pelicula-cover-aspect-ratio: 0.75;
+  }
+  
+  .pelicula-cover {
+    width: var(--pelicula-cover-width);
+    height: calc(var(--pelicula-cover-width) / var(--pelicula-cover-aspect-ratio));
+    background-color: #0000004d;
+    border-radius: .5rem;
+    transition: all .5s ease;
+    opacity: .75;
+  }
+
+  .pelicula-cover:hover {
+    border-radius: 1rem;
+    opacity: 1;
+  }
+
+  .pelicula-cover-large {
+    --pelicula-cover-width: var(--pelicula-cover-width-large);
+  }
+  
+  .pelicula-grid {
+    display: grid;
+    justify-content: center;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, var(--pelicula-cover-width));
+  }
+  
+  .pelicula-grid-large {
+    grid-template-columns: repeat(auto-fill, var(--pelicula-cover-width-large));
+  }
+  
+  .pelicula-details {
+    display: flex;
+  }
+  
+  .pelicula-details-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-start;
+  }
+  
+  .pelicula-details-grid {
+    display: grid;
+    align-content: flex-start;
+    align-items: center;
+    grid-gap: 1rem;
+    grid-template-columns: auto auto;
+    margin-left: 20px;
+  }
+  
+  .pelicula-details-btn-grid {
+    display: grid;
+    justify-items: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    grid-template-areas:
+      "edit delete"
+      "director director";
+    grid-gap: .5rem;
+    margin-top: .5rem;
+  }
+  
+  .pelicula-details-director-button {
+    grid-area: director;
+    justify-self: stretch;
+  }
+
+  iframe {
+    width: 70%;
+    height: 70%;
+  }
+
+  .pelicula-trailer {
+    height: 500px;
+  }

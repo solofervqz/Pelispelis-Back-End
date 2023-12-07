@@ -1,0 +1,109 @@
+:root {
+    --form-label-font-size: 1.2rem;
+    --base: #450045; /* Cambia este valor al color hexadecimal que desees */
+    --claro: #c439b3;
+    --oscuro: #b1009c;
+    --peligro: #e74c3c; /* Puedes cambiar este valor también si lo deseas */
+    --gris: #827280; /* Ajusta el porcentaje según tus preferencias */
+    --cafe: #683142;
+    --cafe-oscuro: #6d1330;
+    --color-text-light: #ecf0f1; 
+    --color-text-light-p: #de58ff; 
+  }
+  
+  .form-row {
+    display: flex;
+    margin-bottom: .5rem;
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+ 
+  .form-item:first-child {
+    margin-left: 0;
+  }
+  
+  .form-item-no-grow {
+    flex-grow: 0;
+  }
+  
+  .form-row-end {
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  
+  .form-item > label {
+    font-size: var(--form-label-font-size);
+    color: var(--color-text-light-p);
+    margin-bottom: .25rem;
+    margin-left: .25rem;
+    font-weight: 600;
+  }
+  
+  .form-item input, .form-item select, .form-item textarea {
+    height: 2rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    border: 1px solid #ecf0f1;
+    font-size: 1rem;
+    font-weight: normal;
+    font-family: 'Poppins';
+    outline: none;
+    background-color: var(--color-text-light);
+    transition: all .5s ease;
+    opacity: .9;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-item textarea {
+    height: 100%;
+    resize: none;
+  }
+    
+  .form-item input:hover, .form-item select:hover, .form-item textarea:hover {
+    opacity: 1;
+  }
+  
+  .form-item input:focus, .form-item select:focus, .form-item textarea:focus {
+    opacity: 1;
+  }
+  
+  .filepond--root {
+    font-family: 'Poppins';
+    margin-bottom: 0;
+  }
+  
+  .filepond--panel-root {
+    background-color: var(--form-input-background-color);
+    border: 1px solid var(--form-input-border-color);
+  }
+  
+  .filepond--drop-label {
+    color: var(--color-text-light);
+    font-size: inherit;
+  }
+
+  .input-buscar{
+    display: block;
+    width: 80%;
+    margin-right: 10px;
+  }
+
+  .input-btn-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .input-editar{
+    display: block;
+    width: 100%;
+  }
+
+
+ 

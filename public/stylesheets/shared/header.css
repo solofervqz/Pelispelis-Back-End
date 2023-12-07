@@ -1,0 +1,109 @@
+:root {
+    --nav-title-font-size: 3rem;
+    --nav-title-font-weight: bold;
+    --base: #450045; /* Cambia este valor al color hexadecimal que desees */
+    --claro: #c439b3;
+    --oscuro: #b1009c;
+    --peligro: #e74c3c; /* Puedes cambiar este valor también si lo deseas */
+    --gris: #827280; /* Ajusta el porcentaje según tus preferencias */
+    --cafe: #683142;
+    --cafe-oscuro: #6d1330;
+    --color-text-light: #ecf0f1; 
+    --color-text-light-p: #de58ff; 
+  }
+  
+
+  .header-title {
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-size: var(--nav-title-font-size);
+    font-weight: 600;
+    transition: all .5s ease;
+    margin-right: auto;
+    font-family: 'Poppins';
+  }
+  
+  .header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 0% 2% 0% 2%;
+    background: linear-gradient(to right, var(--oscuro) , var(--claro) );
+    border-radius: .5rem;
+  }
+  
+  
+  .header-nav li a {
+    text-decoration: none;
+    color: var(--color-text-light);
+    font-weight: var(--nav-link-font-weight);
+    padding: 1rem;
+    transition: all .5s ease;
+    font-weight: 500;
+  }
+  
+  .header-nav li a:hover, .header-title:hover {
+    color: var(--base);
+  }
+  .header-nav li:hover {
+    color: var(--oscuro);
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.dropdown-a{
+  color: var(--color-text-light);
+  font-weight: 500;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins';
+  text-decoration: none;
+}
+
+.dropdown-a:hover {
+  color:var(--base);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--oscuro);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow: hidden; 
+  max-height: 0;
+  transition: all 0.5s ease;
+  border-radius: .5rem;
+  font-family: 'Poppins';
+}
+
+
+.dropdown-content a {
+    color: var(--color-text-light);
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.5s ease;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: 'Poppins';
+}
+
+.dropdown-content a:hover {
+    background-color: var(--claro);
+    border-radius: .5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  max-height: 200px; 
+}

@@ -1,0 +1,26 @@
+<!-- vista de búsqueda de películas -->
+<h2 class="page-header">Buscar Película</h2>
+<form action="/peliculas" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Titulo</label>
+      <input type="text" name="title" value="<%= searchOptions.title %>">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-item">
+      <label>Publicado después del</label>
+      <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+    </div>
+    <div class="form-item">
+      <label>Publicado antes del</label>
+      <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Buscar</button>
+  </div>
+</form>
+<br>
+<!-- Incluye cuadrícula de películas -->
+<%- include('../partials/peliculaGrid', { peliculas: peliculas, large: true }) %>

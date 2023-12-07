@@ -1,0 +1,9 @@
+<!-- vista para agregar un nuevo director -->
+<h2 class="page-header">Nuevo director</h2>
+<form action="/directores" method="POST">
+  <%- include('_form_fields') %>
+  <div class="form-row btn-row form-row-end ">
+    <a class="btn btn-danger" href="/directores">Cancelar</a>
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </div>
+</form>

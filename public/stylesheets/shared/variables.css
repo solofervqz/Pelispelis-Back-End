@@ -1,0 +1,12 @@
+:root {
+    --base: #450045;
+    --base-2: #880088; /* Cambia este valor al color hexadecimal que desees */
+    --claro: #c439b3;
+    --oscuro: #b1009c;
+    --peligro: #e74c3c; /* Puedes cambiar este valor también si lo deseas */
+    --gris: #827280; /* Ajusta el porcentaje según tus preferencias */
+    --cafe: #683142;
+    --cafe-oscuro: #6d1330;
+    --color-text-light: #ecf0f1; 
+    --color-text-light-p: #de58ff; /* Cambia este valor al color de texto que prefieras */
+}

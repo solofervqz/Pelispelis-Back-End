@@ -1,0 +1,13 @@
+<!-- vista detallada de un director -->
+<h2 class="page-header"><%= director.name %></h2>
+<!-- Fila de botones para editar y eliminar al director. -->
+<div class="btn-row">
+  <a class="btn btn-primary" href="/directores/<%= director.id %>/edit">Modificar</a>
+  <%- include('../partials/deleteForm',
+              { url: `/directores/${director.id}` }) %>
+</div>
+<!-- Verifica si hay películas asociadas al director. -->
+<% if (peliculasByDirector.length > 0) { %>
+  <h2 class="page-header">Peliculas del director</h2>
+  <%- include('../partials/peliculaGrid', { peliculas: peliculasByDirector }) %>
+<% } %>
